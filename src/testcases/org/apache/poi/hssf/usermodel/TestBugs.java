@@ -2940,6 +2940,7 @@ public final class TestBugs extends BaseTestBugzillaIssues {
         wb.close();
     }
     
+    @Ignore("sealed build: downloads http://poi.apache.org/resources/images/project-logo.jpg, which now redirects to https so ImageIO.read returns null")
     @Test
     public void test46515() throws IOException {
         Workbook wb = HSSFTestDataSamples.openSampleWorkbook("46515.xls");
